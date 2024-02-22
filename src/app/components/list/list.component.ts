@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import Place from 'src/app/interfaces/place.interface';
 import { PlacesService } from 'src/app/services/places.service';
 
@@ -29,4 +29,5 @@ async onClickDelete(place: Place){
   const res = this.PlacesService.deletePlace(place)
   console.log("Eliminado con exito")
 }
+
 }
