@@ -1,0 +1,12 @@
+<div class="listaP">
+    <p>LISTA DE RECETAS DE POSTRES GUARDADAS EN LA BASE DE DATOS</p>
+    <div class="recetaP" *ngFor="let sweet of listaPostres">
+        <div class="infoP">
+            <h4>TITULO:  {{sweet.title}}</h4>
+            <p>INGREDIENTES: {{sweet.ingredients}}</p>
+            <p>PROCESO: {{sweet.process}}</p>
+            <p>AUTOR: {{sweet.autor}}</p>
+            <button (click)="deleteS(sweet)">QUITAR</button>
+        </div>
+    </div>
+</div>
