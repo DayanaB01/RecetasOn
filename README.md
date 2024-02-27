@@ -10,7 +10,6 @@ Crear funciones muy básicas con las que pueda mostrar, agregar y eliminar datos
 pantalla legible para un usuario.
 
 # Live
-En el siguiente enlace se puede observar e interactuar con Recetas On
+En el siguiente enlace se puede observar e interactuar con Recetas On <a href="https://dayanab01.github.io/RecetasOn/">https://dayanab01.github.io/RecetasOn/</a>
 
-<a href="https://dayanab01.github.io/RecetasOn/">https://dayanab01.github.io/RecetasOn/</a>
 <img src="/src/assets/imagenes/principal.png"></img>
