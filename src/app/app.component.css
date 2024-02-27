@@ -1,3 +1,7 @@
+@font-face {
+    font-family: akaya;
+    src: url('../assets/fonts/AkayaTelivigala-Regular.ttf');
+}
 header{
 border: 4px solid #FF7F27;
 height: 5rem;
@@ -33,11 +37,15 @@ margin-bottom: 4%;
     position: absolute;
     z-index: 1;
 }
+.orange h1{
+    color: #ffffff;
+    text-align: center;
+}
  .orange::before{
     content: "";
     position: absolute;
     left: -32px;
-    width: 65%;
+    width: 35%;
     height: 5rem;
     background: #FF7F27;
     transform: skew(40deg);
@@ -57,3 +65,16 @@ main{
     gap: 40px;
     margin-top: 2%;
 }
+.separator{
+    background-color:#FF7F27;
+    margin-top: 5%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-family: akaya;
+    color: #ffffff;
+}
+

@@ -7,10 +7,12 @@ p, h4, button,h5{
     font-size: 25px;
 }
 .listaP{
-    display: flex;
+    display: block;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    height: 700px;
+    overflow: auto;
 }
 .recetaP{
     border: 6px solid #FFC90E;
