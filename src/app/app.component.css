@@ -5,10 +5,10 @@
 header{
 border: 4px solid #FF7F27;
 height: 5rem;
-margin-bottom: 4%;
+margin-bottom: 2%;
 }
 .white{
-    width: 80%;
+    width: 70%;
     height: 5rem;
     display: block;
     position: absolute;
@@ -65,31 +65,24 @@ main{
     gap: 40px;
     margin-top: 2%;
 }
-.separator{
-    background-color:#FF7F27;
-    margin-top: 5%;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 h1{
     font-family: akaya;
     color: #ffffff;
 }
-
-.imagenes{
-    border: 1px solid #FF7F27;
-    width: 100%;
-    height: 550px;
+.contenido{
+    width: 80%;
     display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.imagenes img{
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: 8;
-    transition: 3s ease-in;
-    border: 5px solid white;
+.contenido a {
+    text-decoration-line: none;
+    color: #ffffff;
+    font-family: 'akaya';
+    font-size: large;
 }
+.contenido a::before{
+    color: #000000;
+}
+

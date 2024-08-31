@@ -1,32 +1,19 @@
-<header>
-  <div class="white">
-    <img src="../assets/imagenes/simbolo.png" alt="simbolo-recetas">
-  </div>
-  <div class="orange">
-    <h1>RECETAS ON</h1>
-  </div>
-</header>
-<section class="imagenes">
-  <img src="../assets/imagenes/imgOne.png" alt="receta">
-  <img src="../assets/imagenes/imgTwo.png" alt="Receta">
-  <img src="../assets/imagenes/imgThree.png" alt="Receta">
-</section>
-<main>
-  <section class="form">
-    <app-new-form></app-new-form>
-  </section>
-  <section class="list">
-    <app-list></app-list>
-  </section>
-</main>
-<div class="separator">
-  <h1>POSTRES</h1>
+<div class="main">
+  <header>
+    <div class="white">
+      <img src="../assets/imagenes/simbolo.png" alt="simbolo-recetas">
+    </div>
+    <div class="orange">
+      <div class="contenido">
+        <h1>RECETAS ON</h1>
+        <a class="button" routerLink="inicio">Inicio</a>  |    
+        <a class="button" routerLink="registro">Registro o Inicio sesion</a> 
+      </div>
+    </div>
+  </header>
+  <!-- <div class="principal">
+    <app-inicio></app-inicio>
+  </div> -->
 </div>
-<div class="mainI">
-  <section class="form-sweet">
-    <app-new-sweet></app-new-sweet>
-  </section>
-  <section class="list-sweet">
-    <app-list-sweet></app-list-sweet>
-  </section>
-</div>
+
+<router-outlet></router-outlet>

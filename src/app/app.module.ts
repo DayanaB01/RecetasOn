@@ -10,7 +10,12 @@ import { NewFormComponent } from './components/new-form/new-form.component';
 import { ListComponent } from './components/list/list.component';
 import { NewSweetComponent } from './components/new-sweet/new-sweet.component';
 import { ListSweetComponent } from './components/list-sweet/list-sweet.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { RegistroSesionComponent } from './components/registro-sesion/registro-sesion.component';
 
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +23,16 @@ import { ListSweetComponent } from './components/list-sweet/list-sweet.component
     NewFormComponent,
     ListComponent,
     NewSweetComponent,
-    ListSweetComponent
+    ListSweetComponent,
+    FooterComponent,
+    RegistroSesionComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     provideFirebaseApp(()=> initializeApp(environment.firebase)),
     provideFirestore(()=>getFirestore())
   ],
