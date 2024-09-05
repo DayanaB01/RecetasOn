@@ -1,14 +1,15 @@
+<form action="" [formGroup]="formRegister" (ngSubmit)="onSubmit()">
 <div class="registro">
   <section class="box">
     <div class="register">
       <h4>REGISTRO</h4>
       <label>
         USUARIO:
-        <input type="text" />
+        <input type="text"/>
       </label>
       <label>
         CORREO:
-        <input type="text" />
+        <input type="text" class="form-control" formControlName="correo" />
       </label>
       <label>
         PROFESIÓN:
@@ -20,19 +21,13 @@
       </label>
       <label>
         CONFIRMAR CONTRASEÑA:
-        <input type="password" />
+        <input type="password"  class="form-control" formControlName="password"/>
       </label>
       <button type="submit">REGISTRAR</button>
     </div>
-    <div class="sesion">
-      <h4>INICIAR SESION</h4>
-      <label> USUARIO 
-        <input type="text" />
-      </label>      
-      <label> CONTRASEÑA 
-        <input type="password" />
-      </label>
-      <button type="submit">Entrar</button>
+    <div class="sesion1">
+        <app-sesion></app-sesion>
     </div>
   </section>
 </div>
+</form>

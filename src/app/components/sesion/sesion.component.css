@@ -1,23 +1,4 @@
-.registro{
-    height: 35rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-}
-.box{
-    border: 10px solid #FF7F27;
-    width: 100%;
-    grid-column: 2 / 3;
-    display: flex;
-    border-radius: 10%;
-}
-.register{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-}
-.sesion1{
+.sesion{
     width: 50%;
     display: flex;
     justify-content: space-evenly;

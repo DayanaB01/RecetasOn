@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { environment } from 'src/environments/environment';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth, getAuth} from '@angular/fire/auth'
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -16,6 +17,8 @@ import { RegistroSesionComponent } from './components/registro-sesion/registro-s
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { SesionComponent } from './components/sesion/sesion.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { InicioComponent } from './components/inicio/inicio.component';
     ListSweetComponent,
     FooterComponent,
     RegistroSesionComponent,
-    InicioComponent
+    InicioComponent,
+    SesionComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
     ReactiveFormsModule,
     AppRoutingModule,
     provideFirebaseApp(()=> initializeApp(environment.firebase)),
-    provideFirestore(()=>getFirestore())
+    provideFirestore(()=>getFirestore()),
+    provideAuth(()=> getAuth())
   ],
   providers: [],
   bootstrap: [AppComponent]

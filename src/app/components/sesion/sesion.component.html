@@ -1,0 +1,12 @@
+<form action="" [formGroup]="inicioSesion" (ngSubmit)="Iniciar()">
+    <div class="sesion">
+        <h4>INICIAR SESION</h4>
+        <label> CORREO
+          <input type="text" class="form-control" formControlName="correo"/>
+        </label>      
+        <label> CONTRASEÑA 
+          <input type="password" class="form-control" formControlName="password" />
+        </label>
+        <button type="submit">ENTRAR</button>
+      </div>
+</form>
