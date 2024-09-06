@@ -19,6 +19,7 @@ import { RouterModule } from '@angular/router';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { SesionComponent } from './components/sesion/sesion.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { BannerNavComponent } from './components/banner-nav/banner-nav.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     RegistroSesionComponent,
     InicioComponent,
     SesionComponent,
-    PerfilComponent
+    PerfilComponent,
+    BannerNavComponent
   ],
   imports: [
     BrowserModule,

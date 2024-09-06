@@ -1,12 +1,17 @@
-<div class="listas">
-    <p>LISTA DE RECETAS GUARDADAS EN LA BASE DE DATOS</p>
-    <div class="receta" *ngFor="let place of places">    
-        <div class="info">
-            <h5>RECETA: </h5><p>{{place.title}}</p>
-            <h5>INGREDIENTES:</h5><p>{{place.ingredients}}</p>
-            <h5>PROCESO: </h5><p>{{place.process}}</p>
-            <h5>AUTOR: </h5><p>{{place.autor}}</p>
-            <button (click)="onClickDelete(place)">QUITAR</button>
+<div class="contenedor">
+    <div class="boxNav">
+        <app-banner-nav></app-banner-nav>
+    </div>
+    <div class="listas">
+        <p>LISTA DE RECETAS GUARDADAS EN LA BASE DE DATOS</p>
+        <div class="receta" *ngFor="let place of places">    
+            <div class="info">
+                <h5>RECETA: </h5><p>{{place.title}}</p>
+                <h5>INGREDIENTES:</h5><p>{{place.ingredients}}</p>
+                <h5>PROCESO: </h5><p>{{place.process}}</p>
+                <h5>AUTOR: </h5><p>{{place.autor}}</p>
+                <button (click)="onClickDelete(place)">QUITAR</button>
+            </div>
         </div>
     </div>
 </div>

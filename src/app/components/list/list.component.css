@@ -31,3 +31,13 @@ button{
     border-radius: 10px;
     color: white;
 }
+.boxNav{
+    border: 2px solid salmon;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contenedor{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+}
