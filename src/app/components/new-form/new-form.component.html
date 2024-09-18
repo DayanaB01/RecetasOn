@@ -11,6 +11,12 @@
             <input type="text" class="form-control" formControlName="title">
         </div>
         <div class="mb-3">
+            <label class="form-label">Categoria: </label>
+            <select ng-model="Selected" formControlName="category">
+                <option class="form-control"  value="{{i}}" *ngFor="let i of options">{{i}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
             <label class="form-label">Ingredientes:</label>
             <textarea class="form-control" id="" cols="30" rows="10" formControlName="ingredients"></textarea>
         </div>
@@ -20,10 +26,14 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Autor:</label>
-            <input type="text" class="form-control" formControlName="autor">
+            <input type="text" class="form-control" formControlName="autor" [ngModel]="autor">
         </div>
         <div class="mb-3">
             <button type="submit">Agregar</button>
         </div>
     </form>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+
 </div>

@@ -4,4 +4,5 @@ export default interface Place {
     ingredients: string;
     process: string;
     autor: string;
+    category: string;
 }

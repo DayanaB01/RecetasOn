@@ -15,7 +15,8 @@ constructor( private PlacesService: PlacesService){
     title: 'Prueba de sitio',
     ingredients: '321',
     process: '-3',
-    autor: 'NN'
+    autor: 'NN',
+    category:'opcional'
   }];
 }
 
