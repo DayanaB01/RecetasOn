@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { Auth } from '@angular/fire/auth';
+import User from 'src/app/interfaces/user.interface';
 import { UsersService } from 'src/app/services/users.service';
 
 
@@ -10,10 +12,17 @@ import { UsersService } from 'src/app/services/users.service';
 })
 
 
-export class PerfilComponent {
- 
+export class PerfilComponent implements OnInit{
 
-  constructor(private usersService: UsersService, private router: Router) {}
+  	public email: any = "";
+    public name: any = "";
+  constructor(private usersService: UsersService, private router: Router, private auth: Auth) {}
+  
+  ngOnInit(){
+    const user = this.auth.currentUser;
+    this.email = user?.email;
+    this.name = user?.displayName;
+  }
 
   salir() {
     this.usersService
@@ -23,5 +32,4 @@ export class PerfilComponent {
       })
       .catch((e) => console.log(e));
   }
-
 }

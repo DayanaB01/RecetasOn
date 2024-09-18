@@ -14,7 +14,9 @@ export class RegistroSesionComponent{
   constructor(private usersService: UsersService){
     this.formRegister = new FormGroup({
       correo: new FormControl(),
-      password: new FormControl()
+      password: new FormControl(),
+      usuario: new FormControl(),
+      profesion: new FormControl()
     })
   }
 

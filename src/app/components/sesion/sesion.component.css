@@ -1,11 +1,11 @@
 .sesion{
-    width: 50%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     background-color: #f4ceb5;
     border-radius: 0px 50px 50px 0px;
+    height: 20rem;
 }
 
 h4{
