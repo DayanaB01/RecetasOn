@@ -2,34 +2,47 @@
     font-family: akaya;
     src: url('../../../assets/fonts/AkayaTelivigala-Regular.ttf');
 }
-p,h5{
+p{
     font-family: akaya;
     font-size: 25px;
     text-align: center;
     line-height: 15px;
 }
 .listas{
-    display: block;
-    justify-content: center;
+    display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-   /* border: 1px solid darkblue*/;
     height: 700px;
     overflow: auto;
+    border: 4px purple solid;
 }
 .receta{
     border: 6px double #FF7F27;
     border-radius: 15px;
     width: 80%;
-    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+.info{
+    width: 60%;
 }
 button{
-    font-family: akaya;
+    font-family: 'akaya';
     font-size: 25px;
-    background-color: #22B14C;
-    border: 4px solid #22b14d7c;
+    background-color: #FF7F27;
+   border:  6px double rgb(255 255 255);
     border-radius: 10px;
-    color: white;
+    color: #ffffff;
+    cursor: pointer;
+}
+h5{
+    font-family: 'akaya';
+}
+li{
+    text-decoration: underline;
+    list-style: none;
+    font-family: 'akaya';
 }
 .boxNav{
     border: 2px solid salmon;
@@ -40,4 +53,8 @@ button{
 .contenedor{
     display: grid;
     grid-template-columns: 0.5fr 2fr;
+}
+footer{
+    grid-column: 1 / 3;
+    margin-top: 2%;
 }
