@@ -6,18 +6,11 @@
         <p>LISTA DE RECETAS GUARDADAS EN LA BASE DE DATOS</p>
         <div class="receta" *ngFor="let place of places">    
             <div class="info">
-                <h5>RECETA: </h5>
-                <li>{{place.title}}</li>
-                <p></p>
-                <h5>INGREDIENTES:</h5>
-                <li>{{place.ingredients}}</li>
-                <p></p>
-                <h5>PROCESO: </h5>
-                <li>{{place.process}}</li>
-                <p></p>
-                <h5>AUTOR: </h5>
-                <li>{{place.autor}}</li>
-                <p></p>
+                <label>RECETA: <input type="text" placeholder="{{place.title}}"> </label>
+                <label>INGREDIENTES: <textarea name="" id="">{{place.ingredients}}</textarea></label>
+                <label>PROCESO: <textarea name="" id="">{{place.process}}</textarea></label>
+                <label>AUTOR: <input type="text" placeholder="{{place.autor}}"></label>
+                <button>EDITAR</button>    
                 <button (click)="onClickDelete(place)">QUITAR</button>
             </div>
         </div>

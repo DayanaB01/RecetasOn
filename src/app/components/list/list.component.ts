@@ -16,7 +16,8 @@ constructor( private PlacesService: PlacesService){
     ingredients: '321',
     process: '-3',
     autor: 'NN',
-    category:'opcional'
+    category:'opcional',
+    public: false,
   }];
 }
 

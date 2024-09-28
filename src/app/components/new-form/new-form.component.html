@@ -25,6 +25,12 @@
             <textarea class="form-control" id="" cols="30" rows="10" formControlName="process"></textarea>
         </div>
         <div class="mb-3">
+            <label class="from-label">¿Quieres publicar tu receta?</label>
+            <select ng-model="Selected" formControlName="public">
+                <option value="{{o}}" *ngFor="let o of option">{{o}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
             <label class="form-label">Autor:</label>
             <input type="text" class="form-control" formControlName="autor" [ngModel]="autor">
         </div>

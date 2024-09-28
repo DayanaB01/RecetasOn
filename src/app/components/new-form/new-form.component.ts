@@ -13,6 +13,7 @@ export class NewFormComponent {
     formulario: FormGroup;
     autor: any = "";
     options: [String, String, String] = ['Estrella', 'Entrada', 'principal'];
+    option:[true, false] = [true, false];
 
     constructor(
       private placesService: PlacesService, private userS: UsersService
@@ -22,7 +23,8 @@ export class NewFormComponent {
       ingredients: new FormControl(),
       process: new FormControl(),
       autor: new FormControl(),
-      category: new FormControl()
+      category: new FormControl(),
+      public: new FormControl(),
      })
     }
 
