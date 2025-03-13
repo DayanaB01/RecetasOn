@@ -6,6 +6,7 @@ import { RegistroSesionComponent } from './components/registro-sesion/registro-s
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { NewFormComponent } from './components/new-form/new-form.component';
 import { ListComponent } from './components/list/list.component';
+import { RecetarioComponent } from './components/recetario/recetario.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path: 'registro', component: RegistroSesionComponent},
   {path: 'perfil', component: PerfilComponent, ...canActivate(()=>redirectUnauthorizedTo(['inicio']))},
   {path: 'crearlista', component: NewFormComponent},
-  {path: 'verlista', component: ListComponent}
+  {path: 'verlista', component: ListComponent},
+  {path: 'recetario', component: RecetarioComponent}
 ];
 
 

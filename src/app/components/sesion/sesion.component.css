@@ -4,8 +4,8 @@
     align-items: center;
     flex-direction: column;
     background-color: #f4ceb5;
-    border-radius: 0px 50px 50px 0px;
-    height: 20rem;
+    height: 35rem;
+    border-radius: 0px 34px 34px 0px;
 }
 
 h4{
@@ -21,19 +21,19 @@ input{
     border: none;
     border-bottom: .2em solid black;
     width: 100%;
-    margin-top: 10%;
 }
 .sesion input{
     background: #f4ceb5;
+    margin-bottom: 15%;
 }
 
 button{
-    background-color: #ffffff ;
-    border-radius: 10%;
+    background: #ff7f27 ;
+    border-radius: 10px;
     border: 3px solid #FF7F27;
-    color: #FF7F27;
+    color: #ffffff;
     font-family: 'akaya';
-    width: 30%;
+    width: 50%;
     cursor: pointer;
 }
 

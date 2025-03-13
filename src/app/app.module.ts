@@ -20,6 +20,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { SesionComponent } from './components/sesion/sesion.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { BannerNavComponent } from './components/banner-nav/banner-nav.component';
+import { RecetarioComponent } from './components/recetario/recetario.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { BannerNavComponent } from './components/banner-nav/banner-nav.component
     InicioComponent,
     SesionComponent,
     PerfilComponent,
-    BannerNavComponent
+    BannerNavComponent,
+    RecetarioComponent
   ],
   imports: [
     BrowserModule,

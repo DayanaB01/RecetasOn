@@ -1,12 +1,12 @@
 footer{
     background: #FF7F27;
     font-family: 'akaya';
-    height: 20rem;
-    height: 5rem;
     display: flex;
     justify-content: center;
-    font-size: medium;
 }
 ul li{
     list-style: none;
+    font-size: medium;
+    text-align: center;
+    font-weight: 600;
 }
