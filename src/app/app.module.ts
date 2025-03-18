@@ -21,6 +21,11 @@ import { SesionComponent } from './components/sesion/sesion.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { BannerNavComponent } from './components/banner-nav/banner-nav.component';
 import { RecetarioComponent } from './components/recetario/recetario.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ModalRecetarioComponent } from './components/modal-recetario/modal-recetario.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -35,7 +40,8 @@ import { RecetarioComponent } from './components/recetario/recetario.component';
     SesionComponent,
     PerfilComponent,
     BannerNavComponent,
-    RecetarioComponent
+    RecetarioComponent,
+    ModalRecetarioComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +50,16 @@ import { RecetarioComponent } from './components/recetario/recetario.component';
     AppRoutingModule,
     provideFirebaseApp(()=> initializeApp(environment.firebase)),
     provideFirestore(()=>getFirestore()),
-    provideAuth(()=> getAuth())
+    provideAuth(()=> getAuth()),
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatInputModule
+  ],
+  exports:[
+    MatButtonModule,
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
