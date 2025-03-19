@@ -1,23 +1,23 @@
 <div class="contenedor">
     <div class="boxNav">
-        <app-banner-nav></app-banner-nav>
+        <!-- <app-banner-nav></app-banner-nav> -->
     </div>
     <div class="boxVista">
         <div class="titulo">
             <h4>MI PERFIL</h4>
         </div>
         <div class="vista" >
-            <label for="">MI USUARIO: </label>
+            <label for="">USUARIO: </label>
             <input type="text" [ngModel]="name">
-            <label for="">MI CORREO: </label>
+            <label for="">CORREO: </label>
             <input type="text" [ngModel]="email">
-            <label for="">PROFESIÓN: </label>
+            <label for="">Contraseña: </label>
             <input type="text">
         </div>
         <div class="acciones">
-            <button>EDITAR</button>
-            <button>ELIMINAR</button>
             <button  (click)="salir()">CERRAR SESIÓN</button>
+            <button>Cambiar contraseña</button>
+            <button class="eliminar">ELIMINAR</button>
             <!-- <button (click)="ver()">VER</button> -->
         </div>
     </div>

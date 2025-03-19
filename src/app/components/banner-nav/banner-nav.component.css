@@ -1,11 +1,11 @@
 .navBanner{
-    height: 25rem;
+    /* height: 25rem; */
     display: flex;
     align-items: center;
 }
 ul{
     display: flex;
-    height: 20rem;
+    /* height: 20rem; */
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
@@ -15,7 +15,7 @@ li{
     text-decoration: none;
     color: #FF7F27;
     font-family: 'akaya';
-    font-size: x-large;
+    /* font-size: x-large; */
     list-style: none;
 }
 a{
