@@ -1,9 +1,14 @@
 <div class="contenedorGeneral">
     <div class="buscador">
-        <label for="Buscar">
-            Buscar
-            <input type="text">
-        </label>
+        <mat-form-field class="example-full-width">
+            <mat-label>Buscar: </mat-label>
+            <input 
+            [(ngModel)]="textoBuscar" 
+            name="textoBuscar" 
+            matInput placeholder="Ex. Pizza" 
+            value="Sushi"
+            (keyup.enter)="buscar()">
+          </mat-form-field>
     </div>
 <div class="targetas">
     <div class="card">

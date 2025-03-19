@@ -8,6 +8,7 @@ import { ModalRecetarioComponent } from '../modal-recetario/modal-recetario.comp
   styleUrls: ['./recetario.component.css']
 })
 export class RecetarioComponent {
+  textoBuscar = '';
   constructor( public dialog: MatDialog){}
 
   openModal() {
@@ -18,5 +19,9 @@ export class RecetarioComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  buscar(){
+    console.log('Buscando en una función')
   }
 }
