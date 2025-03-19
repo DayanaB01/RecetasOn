@@ -1,6 +1,8 @@
 import { Component, HostListener } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import Place from 'src/app/interfaces/place.interface';
 import { PlacesService } from 'src/app/services/places.service';
+import { NewFormComponent } from '../new-form/new-form.component';
 
 @Component({
   selector: 'app-list',
@@ -10,7 +12,7 @@ import { PlacesService } from 'src/app/services/places.service';
 export class ListComponent {
   places: Place[];
 
-constructor( private PlacesService: PlacesService){
+constructor( private PlacesService: PlacesService, public dialog: MatDialog){
   this.places = [{
     title: 'Prueba de sitio',
     ingredients: '321',
@@ -18,6 +20,7 @@ constructor( private PlacesService: PlacesService){
     autor: 'NN',
     category:'opcional',
     public: false,
+    description: 'comentario'
   }];
 }
 
@@ -25,6 +28,12 @@ ngOnInit(): void{
   this.PlacesService.getPlaces().subscribe(places=>{
     this.places = places;
   })
+}
+
+openReceta(){
+  this.dialog.open(NewFormComponent,{
+    width: '50%'
+  });
 }
 
 async onClickDelete(place: Place){

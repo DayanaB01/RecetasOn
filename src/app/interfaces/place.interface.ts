@@ -6,4 +6,5 @@ export default interface Place {
     autor: string;
     category: string;
     public: boolean;
+    description: string;
 }

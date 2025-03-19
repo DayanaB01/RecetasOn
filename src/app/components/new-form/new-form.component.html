@@ -1,11 +1,6 @@
 <div class="contenedor">
-    <div class="boxNav">
-        <app-banner-nav></app-banner-nav>
-    </div>
+    <mat-dialog-content class="mat-typography">
     <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
-        <div>
-            <p>INGRESA LOS DATOS PARA EL REGISTRO DE NUEVAS RECETAS</p>
-        </div>
         <div class="mb-3">
             <label class="form-label">Titulo:</label>
             <input type="text" class="form-control" formControlName="title">
@@ -17,11 +12,15 @@
             </select>
         </div>
         <div class="mb-3">
+            <label class="form-label">Descripción:</label>
+            <input type="text" class="form-control" formControlName="description">
+        </div>
+        <div class="mb-3">
             <label class="form-label">Ingredientes:</label>
             <textarea class="form-control" id="" cols="30" rows="10" formControlName="ingredients"></textarea>
         </div>
         <div class="mb-3">
-            <label class="form-label">Proceso:</label>
+            <label class="form-label">Preparación:</label>
             <textarea class="form-control" id="" cols="30" rows="10" formControlName="process"></textarea>
         </div>
         <div class="mb-3">
@@ -31,15 +30,12 @@
             </select>
         </div>
         <div class="mb-3">
-            <label class="form-label">Autor:</label>
-            <input type="text" class="form-control" formControlName="autor" [ngModel]="autor">
-        </div>
-        <div class="mb-3">
+            <input type="text" class="form-control" formControlName="autor" [(ngModel)]="autor"  [disabled]="isDisable">
             <button type="submit">Agregar</button>
         </div>
     </form>
-    <footer>
-        <app-footer></app-footer>
-    </footer>
-
+    <mat-dialog-actions align="center">
+        <button mat-button mat-dialog-close>Cancelar</button>
+    </mat-dialog-actions>
+</mat-dialog-content>
 </div>

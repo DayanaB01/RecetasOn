@@ -1,17 +1,39 @@
 <div class="contenedor">
-    <div class="boxNav">
+    <!-- <div class="boxNav">
         <app-banner-nav></app-banner-nav>
+    </div> -->
+    <div class="btnCrear">
+        <button type="button" (click)="openReceta()">Nueva receta</button>
     </div>
     <div class="listas">
-        <p>LISTA DE RECETAS GUARDADAS EN LA BASE DE DATOS</p>
         <div class="receta" *ngFor="let place of places">    
             <div class="info">
-                <label>RECETA: <input type="text" placeholder="{{place.title}}"> </label>
+                <mat-card appearance="outlined">
+                    <div class="img">
+                        <img mat-card-md-image src="../../../assets/imagenes/balanced-diet.png"  alt="Image of food">
+                    </div>
+                    <div class="cardContenedor">
+                        <mat-card-header>
+                            <mat-card-title>{{place.title}}</mat-card-title>
+                          </mat-card-header>
+                          <mat-card-content>                        
+                              <ul>
+                                  <li> INGREDIENTES: {{place.ingredients}}</li>
+                                  <li>PREPARACIÓN: {{place.process}} </li>
+                              </ul>
+                            </mat-card-content>
+                          <mat-card-actions align="start">
+                            <button mat-button>Editar</button>
+                            <button mat-button>Eliminar</button>
+                          </mat-card-actions>
+                    </div>
+                  </mat-card>
+                <!-- <label>RECETA: <input type="text" placeholder="{{place.title}}"> </label>
                 <label>INGREDIENTES: <textarea name="" id="">{{place.ingredients}}</textarea></label>
                 <label>PROCESO: <textarea name="" id="">{{place.process}}</textarea></label>
                 <label>AUTOR: <input type="text" placeholder="{{place.autor}}"></label>
                 <button>EDITAR</button>    
-                <button (click)="onClickDelete(place)">QUITAR</button>
+                <button (click)="onClickDelete(place)">QUITAR</button> -->
             </div>
         </div>
     </div>

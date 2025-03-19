@@ -14,6 +14,7 @@ export class NewFormComponent {
     autor: any = "";
     options: [String, String, String] = ['Estrella', 'Entrada', 'principal'];
     option:[true, false] = [true, false];
+    isDisable:boolean= false;
 
     constructor(
       private placesService: PlacesService, private userS: UsersService
@@ -25,6 +26,7 @@ export class NewFormComponent {
       autor: new FormControl(),
       category: new FormControl(),
       public: new FormControl(),
+      description: new FormControl()
      })
     }
 
@@ -34,8 +36,8 @@ export class NewFormComponent {
     }
     
    async onSubmit(){
-    //  console.log(this.formulario.value)
-        const response= await this.placesService.addPlace(this.formulario.value)
+   //console.log(this.formulario.value)
+       const response= await this.placesService.addPlace(this.formulario.value)
     //  console.log("AQUI!!!",response)
     }
 
