@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-banner-nav',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./banner-nav.component.css']
 })
 export class BannerNavComponent {
+
+  servicio = inject(UsersService);
 
 }

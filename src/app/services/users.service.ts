@@ -34,6 +34,15 @@ export class UsersService {
     return signOut(this.auth)
   }
 
+  islogin():boolean{
+    const user = this.auth.currentUser;    
+    if (user === null) {
+      return false ;
+    } else {
+      return true;
+    }
+  }
+
 
   //DONDE PONER EL BOTÓN PARA SALIR DEL LOGIN??
   //HACER UN COMPONENTE DE PERFIL Y AITORIXAR LA DE CREAR Y VER RECETAS

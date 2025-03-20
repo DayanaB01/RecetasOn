@@ -20,12 +20,9 @@ export class SesionComponent {
   }
 
   Iniciar(){
-    //console.log(this.inicioSesion.value)
     this.userservice.login(this.inicioSesion.value)
-    .then(res=>{
-      //console.log(res)
-      this.routers.navigate(['/perfil'])
-      
+    .then(res=>{    
+      this.routers.navigate(['/verlista'])      
     })
     .catch(error=>console.log(error))
   }

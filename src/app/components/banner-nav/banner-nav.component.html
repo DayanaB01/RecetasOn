@@ -1,7 +1,14 @@
-<div class="navBanner">
-    <ul>
-        <li> <a class="button" routerLink="/perfil">MI PERFIL</a></li>
-        <li><a class="button" routerLink="/crearlista"> NUEVA RECETA</a></li>
-        <li><a class="button" routerLink="/verlista">MIS RECETAS</a></li>
-    </ul>
+<div class="general">
+    <div class="white">
+        <h1>RECETAS ON</h1>
+      </div>
+      <div class="orange">
+        <div class="contenido">
+          <button type="button" routerLink="/inicio">Inicio</button>
+          <button  type="button" routerLink="/recetario">Recetario</button>
+          <button *ngIf="!servicio.islogin()" type="button" routerLink="/registro">Registrarse/Iniciar sesion</button>
+          <button *ngIf="servicio.islogin()" routerLink="/verlista">Mis recetas</button>
+          <button *ngIf="servicio.islogin()" routerLink="/perfil">Mi perfil</button>
+        </div>
+    </div>
 </div>

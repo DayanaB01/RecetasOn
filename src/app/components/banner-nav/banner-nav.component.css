@@ -1,23 +1,73 @@
-.navBanner{
-    /* height: 25rem; */
-    display: flex;
-    align-items: center;
+@font-face {
+    font-family: akaya;
+    src: url('../../../assets/fonts/AkayaTelivigala-Regular.ttf');
 }
-ul{
-    display: flex;
-    /* height: 20rem; */
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    padding: 0px;
+.general{
+border: 6px solid #FF7F27;
+background: #FF7F27;
+display: grid;
+grid-template-columns: auto auto;
+margin-bottom: 1%;
 }
-li{
-    text-decoration: none;
+.white{
+    background: #ffffff;
+    border-radius: 0px 0px 100px 0px;
+    width: 70%;
+}
+.white img{
+    width: 15%;
+    height: 95%;
+    margin-left: 8%;
+}
+.orange{
+    background: #FF7F27;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.white h1{
     color: #FF7F27;
+    text-align: center;
+}
+main{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 40px;
+}
+.mainI{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 40px;
+    margin-top: 2%;
+}
+h1{
+    font-family: akaya;
+    color: #ffffff;
+}
+.contenido{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contenido button{
+    background: #ffffff;
+    border: 1px orange solid;
+    border-radius: 10px;
+    text-decoration-line: none;
+    color: #C96F01;
     font-family: 'akaya';
-    /* font-size: x-large; */
-    list-style: none;
+    font-size: large;
+    cursor: pointer;
 }
-a{
-    text-decoration: none;
+
+.contenido button::before{
+    color: #000000;
 }
+
