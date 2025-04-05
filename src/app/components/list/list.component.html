@@ -24,16 +24,10 @@
                             </mat-card-content>
                           <mat-card-actions align="start">
                             <button mat-button>Editar</button>
-                            <button mat-button>Eliminar</button>
+                            <button mat-button (click)="onClickDelete(place)">Eliminar</button>
                           </mat-card-actions>
                     </div>
                   </mat-card>
-                <!-- <label>RECETA: <input type="text" placeholder="{{place.title}}"> </label>
-                <label>INGREDIENTES: <textarea name="" id="">{{place.ingredients}}</textarea></label>
-                <label>PROCESO: <textarea name="" id="">{{place.process}}</textarea></label>
-                <label>AUTOR: <input type="text" placeholder="{{place.autor}}"></label>
-                <button>EDITAR</button>    
-                <button (click)="onClickDelete(place)">QUITAR</button> -->
             </div>
         </div>
     </div>

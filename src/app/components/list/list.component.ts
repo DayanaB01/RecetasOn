@@ -38,7 +38,7 @@ openReceta(){
 
 async onClickDelete(place: Place){
   const res = this.PlacesService.deletePlace(place)
-  console.log("Eliminado con exito")
+  alert("Eliminado con exito")
 }
 
 }

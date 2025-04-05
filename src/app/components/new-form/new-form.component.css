@@ -26,6 +26,7 @@ button{
     border-radius: 10px;
     width: 80%;
     color: #ffffff;
+    cursor: pointer;
 }
 mat-dialog-actions button{
     color: #ffffff;
