@@ -27,6 +27,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ModalRecetarioComponent } from './components/modal-recetario/modal-recetario.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import { EditsRecipeComponent } from './components/edits-recipe/edits-recipe.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {MatCardModule} from '@angular/material/card';
     PerfilComponent,
     BannerNavComponent,
     RecetarioComponent,
-    ModalRecetarioComponent
+    ModalRecetarioComponent,
+    EditsRecipeComponent
   ],
   imports: [
     BrowserModule,

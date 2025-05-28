@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import Place from 'src/app/interfaces/place.interface';
 import { PlacesService } from 'src/app/services/places.service';
 import { NewFormComponent } from '../new-form/new-form.component';
+import { EditsRecipeComponent } from '../edits-recipe/edits-recipe.component';
 
 @Component({
   selector: 'app-list',
@@ -40,5 +41,17 @@ async onClickDelete(place: Place){
   const res = this.PlacesService.deletePlace(place)
   alert("Eliminado con exito")
 }
+
+openEdit(recipe: any){
+  this.dialog.open(EditsRecipeComponent,{
+      data:{
+        detalle:recipe, 
+      }
+  })
+}
+
+// async clickUpdate(place: Place){
+//   this.PlacesService.getEditPlace(this.places)
+// }
 
 }

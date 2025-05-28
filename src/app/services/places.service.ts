@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Firestore, collectionData } from '@angular/fire/firestore';
 import Place from '../interfaces/place.interface';
-import { collection, addDoc, doc, deleteDoc } from 'firebase/firestore';
+import { collection, addDoc, doc, deleteDoc, updateDoc } from 'firebase/firestore';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -25,5 +25,15 @@ export class PlacesService {
     const placeDocRef = doc(this.firestore, `places/${place.id}`);
     return deleteDoc(placeDocRef);
   } 
+
+  // getRecipe(recipe: Place): Observable<Place>{
+  //   const recipeRef = doc(this.firestore, `places/${recipe.id}`);
+  //   return recipeRef as Observable<Place>;
+  // }
+
+  getEditPlace(recipe: Place){
+    const placeDocRef = doc(this.firestore, `places/${recipe.id}`);
+    return updateDoc(placeDocRef, {recipe}); 
+  }
 
 }

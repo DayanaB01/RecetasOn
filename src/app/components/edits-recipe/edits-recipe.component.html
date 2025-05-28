@@ -1,0 +1,34 @@
+<div class="contenedor">
+    <mat-dialog-content class="mat-typography">
+    <form [formGroup]="formularioedit" id="fomularioEdit">
+        <div class="mb-3">
+            <label class="form-label">Titulo:</label>
+            <input type="text" class="form-control" formControlName="title">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Descripción:</label>
+            <input type="text" class="form-control" formControlName="description">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Ingredientes:</label>
+            <textarea class="form-control" id="" cols="30" rows="10" formControlName="ingredients" ></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Preparación:</label>
+            <textarea class="form-control" id="" cols="30" rows="10" formControlName="process"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="from-label">¿Quieres publicar tu receta?</label>
+            <select ng-model="Selected"  formControlName="public" >
+                <option>{{receta.public}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <button mat-button mat-dialog-close>Editar</button>
+        </div>
+    </form>
+    <mat-dialog-actions align="center">
+        <button mat-button mat-dialog-close>Cancelar</button>
+    </mat-dialog-actions>
+</mat-dialog-content>
+</div>
