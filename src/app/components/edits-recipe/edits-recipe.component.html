@@ -1,6 +1,6 @@
 <div class="contenedor">
     <mat-dialog-content class="mat-typography">
-    <form [formGroup]="formularioedit" id="fomularioEdit">
+    <form [formGroup]="formularioedit" id="fomularioEdit" (ngSubmit)="onEditar()">
         <div class="mb-3">
             <label class="form-label">Titulo:</label>
             <input type="text" class="form-control" formControlName="title">
@@ -18,13 +18,14 @@
             <textarea class="form-control" id="" cols="30" rows="10" formControlName="process"></textarea>
         </div>
         <div class="mb-3">
-            <label class="from-label">¿Quieres publicar tu receta?</label>
-            <select ng-model="Selected"  formControlName="public" >
-                <option>{{receta.public}}</option>
+            <label class="from-label" for="options">¿Quieres publicar tu receta?</label>
+            <select id="options" ng-model="Selected" formControlName="public">
+                <option >true</option>
+                <option >false</option>
             </select>
         </div>
         <div class="mb-3">
-            <button mat-button mat-dialog-close>Editar</button>
+             <button>Editar</button>
         </div>
     </form>
     <mat-dialog-actions align="center">
