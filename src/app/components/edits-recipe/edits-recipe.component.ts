@@ -10,25 +10,28 @@ import { PlacesService } from 'src/app/services/places.service';
 })
 export class EditsRecipeComponent implements OnInit{
   formularioedit: FormGroup;
-  receta:any;
+  receta:any = this.data.detalle;
+  key: string = this.data.detalle.id;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data:any, private placeServices: PlacesService) { 
     this.formularioedit = new FormGroup({
-          title: new FormControl(this.data.detalle.title),
-          ingredients: new FormControl(this.data.detalle.ingredients),
-          process: new FormControl(this.data.detalle.process),
-          public: new FormControl(this.data.detalle.public),
-          description: new FormControl(this.data.detalle.description)
+          title: new FormControl(this.receta.title),
+          ingredients: new FormControl(this.receta.ingredients),
+          process: new FormControl(this.receta.process),
+          public: new FormControl(this.receta.public),
+          description: new FormControl(this.receta.description)
     });
   }
 
   ngOnInit(): void{
-     this.receta = this.data.detalle;
+    //  this.receta = this.data.detalle;
+    console.log("En onInit: ", this.receta)
   }
 
 async onEditar(){
     //PASAR LA IF Y DESPUES EDITAR
-    console.log("Edicion de inforación: ", this.formularioedit.value)
-    await this.placeServices.getEditPlace(this.formularioedit.value)
+    this.formularioedit.value.autor = this.receta.autor;
+    this.formularioedit.value.category = this.receta.category;
+    await this.placeServices.getEditPlace(this.receta.id,this.formularioedit.value)
   }
 }

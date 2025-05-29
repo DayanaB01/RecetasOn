@@ -23,7 +23,8 @@ export class PlacesService {
 
   deletePlace(place: Place){
     const placeDocRef = doc(this.firestore, `places/${place.id}`);
-    return deleteDoc(placeDocRef);
+    console.log("Informacion de eliminar: ", placeDocRef)
+    // return deleteDoc(placeDocRef);
   } 
 
   // getRecipe(recipe: Place): Observable<Place>{
@@ -31,9 +32,9 @@ export class PlacesService {
   //   return recipeRef as Observable<Place>;
   // }
 
-  getEditPlace(recipe: Place){
-    const placeDocRef = doc(this.firestore, `places/${recipe.id}`);
-    return updateDoc(placeDocRef, {recipe}); 
+  getEditPlace(recipe: string, receta_act: any){
+    const placeDocRef = doc(this.firestore, `places/${recipe}`);
+    return updateDoc(placeDocRef, receta_act); 
   }
 
 }
