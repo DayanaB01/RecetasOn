@@ -24,12 +24,10 @@ export class EditsRecipeComponent implements OnInit{
   }
 
   ngOnInit(): void{
-    //  this.receta = this.data.detalle;
-    console.log("En onInit: ", this.receta)
+
   }
 
 async onEditar(){
-    //PASAR LA IF Y DESPUES EDITAR
     this.formularioedit.value.autor = this.receta.autor;
     this.formularioedit.value.category = this.receta.category;
     await this.placeServices.getEditPlace(this.receta.id,this.formularioedit.value)

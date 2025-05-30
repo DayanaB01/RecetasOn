@@ -24,13 +24,8 @@ export class PlacesService {
   deletePlace(place: Place){
     const placeDocRef = doc(this.firestore, `places/${place.id}`);
     console.log("Informacion de eliminar: ", placeDocRef)
-    // return deleteDoc(placeDocRef);
+    return deleteDoc(placeDocRef);
   } 
-
-  // getRecipe(recipe: Place): Observable<Place>{
-  //   const recipeRef = doc(this.firestore, `places/${recipe.id}`);
-  //   return recipeRef as Observable<Place>;
-  // }
 
   getEditPlace(recipe: string, receta_act: any){
     const placeDocRef = doc(this.firestore, `places/${recipe}`);

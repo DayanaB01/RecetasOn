@@ -4,6 +4,8 @@ import Place from 'src/app/interfaces/place.interface';
 import { PlacesService } from 'src/app/services/places.service';
 import { NewFormComponent } from '../new-form/new-form.component';
 import { EditsRecipeComponent } from '../edits-recipe/edits-recipe.component';
+import { RecetarioComponent } from '../recetario/recetario.component';
+import { ModalRecetarioComponent } from '../modal-recetario/modal-recetario.component';
 
 @Component({
   selector: 'app-list',
@@ -50,8 +52,12 @@ openEdit(recipe: any){
   })
 }
 
-// async clickUpdate(place: Place){
-//   this.PlacesService.getEditPlace(this.places)
-// }
+detalleCompleta(detalle: any){
+  this.dialog.open(ModalRecetarioComponent,{
+    data:{
+      info: detalle,
+    }
+  })
+}
 
 }

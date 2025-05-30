@@ -1,17 +1,20 @@
 <div class="general">
-    <h2 mat-dialog-title>Receta Spaguetti</h2>
+    <h2 mat-dialog-title>Receta {{informacion.title}}</h2>
     <mat-dialog-content>
         <mat-form-field class="example-full-width">
             <mat-label>Descripción</mat-label>
-            <input matInput disabled value="My favorite food..">
+            <input matInput disabled value="{{informacion.description}}">
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <mat-label>Ingredientes</mat-label>
-            <input matInput disabled value="Arroz, papa, agua, sal, frijoles, aceite">
+            <input matInput disabled value="{{informacion.ingredients}}">
           </mat-form-field>
           <mat-form-field class="example-full-width">
             <mat-label>Preparación</mat-label>
-            <input matInput disabled value="My favorite food..">
+            <textarea name="" id="" disabled value="{{informacion.process}}">
+
+            </textarea>
+            <!-- <input matInput > -->
           </mat-form-field>
     </mat-dialog-content>
     <mat-dialog-actions>
