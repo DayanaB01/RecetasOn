@@ -1,6 +1,8 @@
 import { Component} from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import Place from 'src/app/interfaces/place.interface';
 import { ModalRecetarioComponent } from '../modal-recetario/modal-recetario.component';
+import { RecetarioService } from 'src/app/services/recetario.service';
 
 @Component({
   selector: 'app-recetario',
@@ -9,7 +11,27 @@ import { ModalRecetarioComponent } from '../modal-recetario/modal-recetario.comp
 })
 export class RecetarioComponent {
   textoBuscar = '';
-  constructor( public dialog: MatDialog){}
+  recetas: Place[];
+
+  constructor( public dialog: MatDialog, private recetarioService: RecetarioService){
+    this.recetas = [{
+      title: 'Prueba de sitio',
+      ingredients: '321',
+      process: '-3',
+      autor: 'NN',
+      category:'opcional',
+      public: false,
+      description: 'comentario'
+    }]
+  }
+
+  ngOnInit(): void{
+      this.recetarioService.getRecetas().subscribe(x=>{
+        this.recetas = x;
+        console.log("RECETAS: ", x)
+      })
+       console.log("RECETAS2: ", this.recetas)
+  }
 
   openModal() {
     const dialogRef = this.dialog.open(ModalRecetarioComponent, {

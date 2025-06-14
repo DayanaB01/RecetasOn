@@ -21,12 +21,10 @@
     justify-content: space-evenly;
 }
 .img{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+  width: 30%;
 }
 .img img{
-    width: 40%;
+    width: 50%;
 }
 .card{
     border: 1px solid #D9D9D9;
