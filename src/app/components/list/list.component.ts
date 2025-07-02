@@ -22,7 +22,7 @@ constructor( private PlacesService: PlacesService, public dialog: MatDialog){
     process: '-3',
     autor: 'NN',
     category:'opcional',
-    public: false,
+    public: '',
     description: 'comentario'
   }];
 }
@@ -56,7 +56,8 @@ detalleCompleta(detalle: any){
   this.dialog.open(ModalRecetarioComponent,{
     data:{
       info: detalle,
-    }
+    },
+    width: '50%'
   })
 }
 

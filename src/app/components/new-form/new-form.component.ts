@@ -13,8 +13,8 @@ export class NewFormComponent {
     formulario: FormGroup;
     autor: any = "";
     options: [String, String, String] = ['Estrella', 'Entrada', 'principal'];
-    option:[true, false] = [true, false];
-    isDisable:boolean= false;
+    option:[String, String] = ['Publicar', 'No publicar'];
+    isDisable:boolean = false;
     close:boolean = true;
 
     constructor(

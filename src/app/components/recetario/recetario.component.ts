@@ -20,17 +20,15 @@ export class RecetarioComponent {
       process: '-3',
       autor: 'NN',
       category:'opcional',
-      public: false,
+      public: '',
       description: 'comentario'
     }]
   }
 
   ngOnInit(): void{
       this.recetarioService.getRecetas().subscribe(x=>{
-        this.recetas = x;
-        console.log("RECETAS: ", x)
+       this.recetas = x.filter((z)=> z.public == 'Publicar' ); 
       })
-       console.log("RECETAS2: ", this.recetas)
   }
 
   openModal() {

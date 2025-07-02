@@ -1,23 +1,15 @@
 <div class="general">
-    <h2 mat-dialog-title>Receta {{informacion.title}}</h2>
-    <mat-dialog-content>
-        <mat-form-field class="example-full-width">
-            <mat-label>Descripción</mat-label>
-            <input matInput disabled value="{{informacion.description}}">
-          </mat-form-field>
-          <mat-form-field class="example-full-width">
-            <mat-label>Ingredientes</mat-label>
-            <input matInput disabled value="{{informacion.ingredients}}">
-          </mat-form-field>
-          <mat-form-field class="example-full-width">
-            <mat-label>Preparación</mat-label>
-            <textarea name="" id="" disabled value="{{informacion.process}}">
-
-            </textarea>
-            <!-- <input matInput > -->
-          </mat-form-field>
-    </mat-dialog-content>
-    <mat-dialog-actions>
-      <button mat-button mat-dialog-close>Cerrar</button>
-    </mat-dialog-actions>
+  <h2 mat-dialog-title>Receta {{informacion.title}}</h2>
+  <mat-dialog-content>
+    <mat-label aria-placeholder="valor">Descripción: </mat-label>
+    <input matInput disabled value="{{informacion.description}}">
+    <mat-label>Ingredientes: </mat-label>
+    <input matInput disabled value="{{informacion.ingredients}}">
+    <mat-label>Preparación: </mat-label>
+    <textarea name="" id="" rows="5" disabled value="{{informacion.process}}">
+    </textarea>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cerrar</button>
+  </mat-dialog-actions>
 </div>

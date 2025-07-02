@@ -5,6 +5,6 @@ export default interface Place {
     process: string;
     autor: string;
     category: string;
-    public: boolean;
+    public: string;
     description: string;
 }
