@@ -27,6 +27,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ModalRecetarioComponent } from './components/modal-recetario/modal-recetario.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 import { EditsRecipeComponent } from './components/edits-recipe/edits-recipe.component';
 
 @NgModule({
@@ -59,14 +60,17 @@ import { EditsRecipeComponent } from './components/edits-recipe/edits-recipe.com
     MatDialogModule,
     MatInputModule,
     FormsModule,
-    MatCardModule
-  ],
+    MatCardModule,
+    MatIconModule
+    ],
   exports:[
     MatButtonModule,
     MatDialogModule,
     MatInputModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,4 +19,5 @@ export class ModalRecetarioComponent {
     process: new FormControl(this.data.info.process)
   })
  }
+
 }

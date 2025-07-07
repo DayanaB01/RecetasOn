@@ -8,6 +8,9 @@
             matInput placeholder="Ex. Pizza" 
             value="Sushi"
             (keyup.enter)="buscar()">
+       <button matSuffix matIconButton aria-label="Clear" (click)="textoBuscar = ''" (click)="buscar()">
+      <mat-icon>close</mat-icon>
+    </button>
           </mat-form-field>
     </div>
 <div class="targetas">
@@ -18,22 +21,9 @@
         <div class="card-body">
             <h3>{{x.title}}</h3>
             <p>{{x.description}}</p>
-               <button type="button" mat-button (click)="openModal()">Ver receta completa</button>
+               <button type="button" mat-button (click)="openModal(x)">Ver receta completa</button>
         </div>
     </div>
-    <!-- <div class="card">
-        <div class="img">
-            <img src="../../../assets/imagenes/feeding.png" alt="">
-        </div>
-        <div class="card-body">
-            <h3>SPAGUETTOOS</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ex dolore dolor sint ullam perferendis esse autem excepturi 
-                velit, error vitae consectetur veritatis aut libero, ad, nam 
-                incidunt! Nam, nisi facere.</p>
-                <button type="button" mat-button (click)="openModal()">Ver receta completa</button>
-        </div>
-    </div>-->
 </div>
 
 <div>
