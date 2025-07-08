@@ -10,12 +10,14 @@ import { SweetsService } from 'src/app/services/sweets.service';
 export class NewSweetComponent {
 
   formsweets: FormGroup;
-
+  option:[String, String] = ['Publicar', 'No publicar'];
   constructor(private sweetsServices: SweetsService){
     this.formsweets = new FormGroup({
       title: new FormControl(),
       ingredients: new FormControl(),
       process: new FormControl(),
+      description: new FormControl(),
+      public: new FormControl(),
       autor: new FormControl()
     })
   }

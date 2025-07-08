@@ -1,6 +1,43 @@
 <div class="listaP">
-    <p>LISTA DE RECETAS DE POSTRES GUARDADAS EN LA BASE DE DATOS</p>
-    <div class="recetaP" *ngFor="let sweet of listaPostres">
+  <div class="EspacioCrear">
+    <button (click)="crearPostre()">Nuevo postre</button>
+  </div>
+  <div class="listaPostres">
+    <div class="postre"   *ngFor="let sweet of listaPostres">
+      <div class="inf">
+        <mat-card appearance="outlined">
+          <div class="image">
+            <img
+              mat-card-md-image
+              src="https://tse2.mm.bing.net/th/id/OIP.XiJ-NsrYJA6TgSykm5_JtwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+              title="nutrition icons"
+            />
+          </div>
+          <div class="contenedor">
+            <mat-card-header>
+              <mat-card-title>{{sweet.title}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <ul>
+                <li>DESCRIPCIÓN: {{sweet.description}}</li>
+                <li>INGREDIENTES: {{sweet.ingredients}}</li>
+              </ul>
+            </mat-card-content>
+            <mat-card-actions align="start">
+              <button>Editar</button>
+              <button (click)="deleteS(sweet)">Eliminar</button>
+            </mat-card-actions>
+          </div>
+        </mat-card>
+      </div>
+      <mat-card-actions>
+        <button mat-button (click)="verMas(sweet)">Más</button>
+      </mat-card-actions>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="recetaPostres" *ngFor="let sweet of listaPostres">
         <div class="infoP">
             <h4>TITULO:  {{sweet.title}}</h4>
             <p>INGREDIENTES: {{sweet.ingredients}}</p>
@@ -8,5 +45,4 @@
             <p>AUTOR: {{sweet.autor}}</p>
             <button (click)="deleteS(sweet)">QUITAR</button>
         </div>
-    </div>
-</div>
+    </div> -->

@@ -1,24 +1,44 @@
-<form [formGroup]="formsweets" (ngSubmit)="enviarPostre()">
-    <div>
-        <p>AQUI PUEDES INGRESAR LAS RECETAS PARA NUEVOS POSTRES.</p>
-    </div>
+<div class="contiene">
+  <mat-dialog-content>
+    <form [formGroup]="formsweets" (ngSubmit)="enviarPostre()">
+      <div class="mb-3">
+        <label class="form-label">Titulo: </label>
+        <input type="text" class="form-control" formControlName="title" />
+      </div>
     <div class="mb-3">
-        <label class="form-label">Titulo</label>
-        <input type="text" class="form-control" formControlName="title">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Ingredientes</label>
-        <textarea class="form-control" cols="30" rows="10" formControlName="ingredients"></textarea>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Proceso</label>
-        <textarea class="form-control" cols="30" rows="10" formControlName="process"></textarea>
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Autor</label>
-        <input type="text" class="form-control" formControlName="autor">
-    </div>
-    <div class="mb-3">
+        <label class="form-label">Descripción: </label>
+        <input type="text" class="form-control" formControlName="description" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Ingredientes:</label>
+        <textarea
+          class="form-control"
+          cols="30"
+          rows="10"
+          formControlName="ingredients"
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Preparación: </label>
+        <textarea
+          class="form-control"
+          cols="30"
+          rows="10"
+          formControlName="process"
+        ></textarea>
+      </div>
+      <div class="mb-3">
+            <label class="from-label">¿Quieres publicar tu receta?</label>
+            <select ng-model="Selected" formControlName="public">
+                <option value="{{o}}" *ngFor="let o of option">{{o}}</option>
+            </select>
+      </div>
+      <div class="mb-3">
         <button type="submit">AGREGAR POSTRE</button>
-    </div>
-</form>
+      </div>
+    </form>
+    <mat-dialog-actions>
+      <button>Cancelar</button>
+    </mat-dialog-actions>
+  </mat-dialog-content>
+</div>

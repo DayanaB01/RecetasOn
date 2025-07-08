@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import Sweet from 'src/app/interfaces/sweet.interface';
 import { SweetsService } from 'src/app/services/sweets.service';
+import { NewSweetComponent } from '../new-sweet/new-sweet.component';
+import { ModalRecetarioComponent } from '../modal-recetario/modal-recetario.component';
 
 @Component({
   selector: 'app-list-sweet',
@@ -10,11 +13,13 @@ import { SweetsService } from 'src/app/services/sweets.service';
 export class ListSweetComponent {
   listaPostres: Sweet[];
 
-  constructor( private SweetsServices: SweetsService){
+  constructor( private SweetsServices: SweetsService,  public dialog: MatDialog){
     this.listaPostres=[{
       title: 'Titulo',
+      description: 'lorem ipsu',
       ingredients: 'prueba',
       process:'prueba',
+      public: 'false',
       autor:'prueba'
     }];
   }
@@ -22,6 +27,20 @@ export class ListSweetComponent {
   ngOnInit(): void{
     this.SweetsServices.getSweets().subscribe(sweets=>{
       this.listaPostres = sweets;
+    })
+  }
+
+  crearPostre(){
+    this.dialog.open(NewSweetComponent,{
+      width: '50%',
+    })
+  }
+
+  verMas(informacion: any){
+    this.dialog.open(ModalRecetarioComponent,{
+      data:{
+        info: informacion,
+      }
     })
   }
 

@@ -8,6 +8,8 @@ import { NewFormComponent } from './components/new-form/new-form.component';
 import { ListComponent } from './components/list/list.component';
 import { RecetarioComponent } from './components/recetario/recetario.component';
 import { EditsRecipeComponent } from './components/edits-recipe/edits-recipe.component';
+import { NewSweetComponent } from './components/new-sweet/new-sweet.component';
+import { ListSweetComponent } from './components/list-sweet/list-sweet.component';
 
 
 const routes: Routes = [
@@ -18,7 +20,9 @@ const routes: Routes = [
   {path: 'crearlista', component: NewFormComponent},
   {path: 'verlista', component: ListComponent},
   {path: 'recetario', component: RecetarioComponent},
-  {path: 'editarlista', component:EditsRecipeComponent}
+  {path: 'editarlista', component:EditsRecipeComponent},
+  {path: 'crearPostres', component:NewSweetComponent },
+  {path: 'postres', component: ListSweetComponent}
 ];
 
 
