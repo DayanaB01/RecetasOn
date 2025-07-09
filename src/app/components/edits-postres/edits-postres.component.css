@@ -1,4 +1,4 @@
-.contenedor{
+.contiene{
     border: 4px #FF7F27 solid;
 }
 label{
@@ -6,7 +6,11 @@ label{
     color: #FF7F27;
     display: flex;
 }
-
+input{
+    width: 100%;
+    border: 2px #FF7F27 solid;
+    padding: 1px;
+}
 button{
     background-color: #FFFFFF;
     border-radius: 10px;

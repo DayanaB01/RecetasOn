@@ -8,8 +8,8 @@
           <button  type="button" routerLink="/recetario">Recetario</button>
           <button *ngIf="!servicio.islogin()" type="button" routerLink="/registro">Registrarse/Iniciar sesion</button>
           <button *ngIf="servicio.islogin()" routerLink="/verlista">Mis recetas</button>
-          <button *ngIf="servicio.islogin()" routerLink="/perfil">Mi perfil</button>
           <button *ngIf="servicio.islogin()" routerLink="/postres">Mis postres</button>
+          <button *ngIf="servicio.islogin()" routerLink="/perfil">Mi perfil</button>
         </div>
     </div>
 </div>

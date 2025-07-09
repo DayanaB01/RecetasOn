@@ -24,7 +24,6 @@ export class NewSweetComponent {
 
   async enviarPostre(){
     const res = await this.sweetsServices.addSweet(this.formsweets.value)
-    console.log("Enviado: ", res)
   }
 
 }

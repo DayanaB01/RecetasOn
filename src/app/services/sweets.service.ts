@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Firestore, collectionData } from '@angular/fire/firestore';
 import Sweet from '../interfaces/sweet.interface';
-import { addDoc, collection, deleteDoc, doc } from 'firebase/firestore';
+import { addDoc, collection, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -14,6 +14,11 @@ export class SweetsService {
   addSweet(sweet: Sweet){
     const sweetRef = collection(this.firestore, 'sweets');
     return addDoc(sweetRef, sweet);
+  }
+
+  editSweet(infoSweet: string, sweet: any){
+    const sweetRef = doc(this.firestore, `sweets/${infoSweet}`);
+    return updateDoc(sweetRef, sweet);
   }
 
   getSweets(): Observable<Sweet[]>{

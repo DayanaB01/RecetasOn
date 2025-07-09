@@ -29,6 +29,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { EditsRecipeComponent } from './components/edits-recipe/edits-recipe.component';
+import { EditsPostresComponent } from './components/edits-postres/edits-postres.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { EditsRecipeComponent } from './components/edits-recipe/edits-recipe.com
     BannerNavComponent,
     RecetarioComponent,
     ModalRecetarioComponent,
-    EditsRecipeComponent
+    EditsRecipeComponent,
+    EditsPostresComponent
   ],
   imports: [
     BrowserModule,

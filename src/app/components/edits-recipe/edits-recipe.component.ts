@@ -1,6 +1,6 @@
 import { Component, Inject, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { PlacesService } from 'src/app/services/places.service';
 
 @Component({
@@ -13,7 +13,12 @@ export class EditsRecipeComponent implements OnInit{
   receta:any = this.data.detalle;
   key: string = this.data.detalle.id;
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data:any, private placeServices: PlacesService) { 
+  constructor(
+    @Inject(MAT_DIALOG_DATA) 
+    public data:any,
+    private placeServices: PlacesService,
+    private dialogRef: MatDialogRef<EditsRecipeComponent>
+  ) { 
     this.formularioedit = new FormGroup({
           title: new FormControl(this.receta.title),
           ingredients: new FormControl(this.receta.ingredients),
@@ -31,5 +36,12 @@ async onEditar(){
     this.formularioedit.value.autor = this.receta.autor;
     this.formularioedit.value.category = this.receta.category;
     await this.placeServices.getEditPlace(this.receta.id,this.formularioedit.value)
+    .then(()=>{
+      this.dialogRef.close()
+    })
   }
+
+cerrarModal(){
+  this.dialogRef.close();
+}
 }

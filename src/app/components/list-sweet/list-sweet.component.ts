@@ -4,6 +4,8 @@ import Sweet from 'src/app/interfaces/sweet.interface';
 import { SweetsService } from 'src/app/services/sweets.service';
 import { NewSweetComponent } from '../new-sweet/new-sweet.component';
 import { ModalRecetarioComponent } from '../modal-recetario/modal-recetario.component';
+import { EditsRecipeComponent } from '../edits-recipe/edits-recipe.component';
+import { EditsPostresComponent } from '../edits-postres/edits-postres.component';
 
 @Component({
   selector: 'app-list-sweet',
@@ -41,6 +43,15 @@ export class ListSweetComponent {
       data:{
         info: informacion,
       }
+    })
+  }
+
+  editarPostre(info: any){
+    this.dialog.open(EditsPostresComponent,{
+      data:{
+        detalle: info,
+      },
+      width: '50%',
     })
   }
 

@@ -1,0 +1,35 @@
+<div class="contiene">
+    <mat-dialog-content>
+        <form [formGroup]="postreEditar" id="modalEditar" (ngSubmit)="editarPostre()">
+            <div class="mb-3">
+                <label for="">Titulo: </label>
+                <input type="text" formControlName="title">
+            </div>
+            <div class="mb-3">
+                <label for="">Descripcion: </label>
+                <input type="text" formControlName="description">
+            </div>
+            <div class="mb-3">
+                <label for="">Ingredientes: </label>
+                <input type="text" formControlName="ingredients">
+            </div>
+            <div class="mb-3">
+                <label for="">Preparación: </label>
+                <input type="text" formControlName="process">
+            </div>
+            <div class="mb-3">
+                <label for="">Publicar: </label>
+                <select name="" id="" formControlName="public">
+                    <option value="">Publicar</option>
+                    <option value="">No publicar</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <button>Editar</button>
+            </div>
+        </form>
+        <mat-dialog-actions>
+            <button (click)="cerrar()">Cancelar</button>
+        </mat-dialog-actions>
+    </mat-dialog-content>
+</div>
