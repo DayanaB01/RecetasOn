@@ -6,6 +6,8 @@ import { NewFormComponent } from '../new-form/new-form.component';
 import { EditsRecipeComponent } from '../edits-recipe/edits-recipe.component';
 import { RecetarioComponent } from '../recetario/recetario.component';
 import { ModalRecetarioComponent } from '../modal-recetario/modal-recetario.component';
+import { filter } from 'rxjs';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-list',
@@ -15,7 +17,7 @@ import { ModalRecetarioComponent } from '../modal-recetario/modal-recetario.comp
 export class ListComponent {
   places: Place[];
 
-constructor( private PlacesService: PlacesService, public dialog: MatDialog){
+constructor( private PlacesService: PlacesService, public dialog: MatDialog, private User: UsersService){
   this.places = [{
     title: 'Prueba de sitio',
     ingredients: '321',
@@ -26,10 +28,13 @@ constructor( private PlacesService: PlacesService, public dialog: MatDialog){
     description: 'comentario'
   }];
 }
-
+//Obtener recetas solo del usuario logeado
 ngOnInit(): void{
+  let user = this.User.miperfil();
+  console.log(user?.uid)
   this.PlacesService.getPlaces().subscribe(places=>{
-    this.places = places;
+   const placesUser = places.filter(x=> x.autor == user?.uid);
+    this.places = placesUser;
   })
 }
 

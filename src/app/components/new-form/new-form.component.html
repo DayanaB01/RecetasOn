@@ -1,6 +1,6 @@
 <div class="contenedor">
-    <mat-dialog-content class="mat-typography">
-    <form [formGroup]="formulario" (ngSubmit)="onSubmit()" id="fomulario">
+    <mat-dialog-content>
+    <form [formGroup]="formulario" (ngSubmit)="enviarReceta()">
         <div class="mb-3">
             <label class="form-label">Titulo:</label>
             <input type="text" class="form-control" formControlName="title">
@@ -30,8 +30,7 @@
             </select>
         </div>
         <div class="mb-3">
-            <input type="text" class="form-control" formControlName="autor" [(ngModel)]="autor"  [disabled]="isDisable">
-            <button mat-button mat-dialog-close>Agregar</button>
+            <button mat-button mat-dialog-close type="submit">Agregar</button>
         </div>
     </form>
     <mat-dialog-actions align="center">

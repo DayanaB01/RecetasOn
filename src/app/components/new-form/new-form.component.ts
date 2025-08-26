@@ -24,8 +24,8 @@ export class NewFormComponent {
       title: new FormControl(),
       ingredients: new FormControl(),
       process: new FormControl(),
-      autor: new FormControl(),
       category: new FormControl(),
+      autor: new FormControl(),
       public: new FormControl(),
       description: new FormControl()
      })
@@ -33,10 +33,14 @@ export class NewFormComponent {
 
     ngOnInit(): void{
       const x = this.userS.miperfil();
-      this.autor = x?.email;
+      //this.autor = x?.email;
+      this.autor = x?.uid;
+      //console.log("info del autor: ", x?.uid, x?.email)
     }
     
-   async onSubmit(){
+async enviarReceta(){
+    this.formulario.value.autor = this.autor;
+    console.log("Formulario: ",this.formulario, " autor: ", this.formulario.value.autor)
       await this.placesService.addPlace(this.formulario.value)
    }
 }
