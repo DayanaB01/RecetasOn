@@ -6,6 +6,7 @@ import { NewSweetComponent } from '../new-sweet/new-sweet.component';
 import { ModalRecetarioComponent } from '../modal-recetario/modal-recetario.component';
 import { EditsRecipeComponent } from '../edits-recipe/edits-recipe.component';
 import { EditsPostresComponent } from '../edits-postres/edits-postres.component';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-list-sweet',
@@ -15,7 +16,7 @@ import { EditsPostresComponent } from '../edits-postres/edits-postres.component'
 export class ListSweetComponent {
   listaPostres: Sweet[];
 
-  constructor( private SweetsServices: SweetsService,  public dialog: MatDialog){
+  constructor( private SweetsServices: SweetsService,  public dialog: MatDialog, private user: UsersService){
     this.listaPostres=[{
       title: 'Titulo',
       description: 'lorem ipsu',
@@ -27,8 +28,10 @@ export class ListSweetComponent {
   }
 
   ngOnInit(): void{
+    let us = this.user.miperfil();
     this.SweetsServices.getSweets().subscribe(sweets=>{
-      this.listaPostres = sweets;
+      const sweetUs = sweets.filter(x => x.autor == us?.uid);
+      this.listaPostres = sweetUs;
     })
   }
 

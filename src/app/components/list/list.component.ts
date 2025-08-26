@@ -31,7 +31,6 @@ constructor( private PlacesService: PlacesService, public dialog: MatDialog, pri
 //Obtener recetas solo del usuario logeado
 ngOnInit(): void{
   let user = this.User.miperfil();
-  console.log(user?.uid)
   this.PlacesService.getPlaces().subscribe(places=>{
    const placesUser = places.filter(x=> x.autor == user?.uid);
     this.places = placesUser;

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl,FormGroup } from '@angular/forms';
 import { SweetsService } from 'src/app/services/sweets.service';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-new-sweet',
@@ -8,10 +9,10 @@ import { SweetsService } from 'src/app/services/sweets.service';
   styleUrls: ['./new-sweet.component.css']
 })
 export class NewSweetComponent {
-
+  user:any="";
   formsweets: FormGroup;
   option:[String, String] = ['Publicar', 'No publicar'];
-  constructor(private sweetsServices: SweetsService){
+  constructor(private sweetsServices: SweetsService, private us: UsersService){
     this.formsweets = new FormGroup({
       title: new FormControl(),
       ingredients: new FormControl(),
@@ -22,8 +23,14 @@ export class NewSweetComponent {
     })
   }
 
+  ngOnInit(): void{
+    const u = this.us.miperfil();
+    this.user = u?.uid;
+  }
+
   async enviarPostre(){
-    const res = await this.sweetsServices.addSweet(this.formsweets.value)
+    this.formsweets.value.autor = this.user;
+    await this.sweetsServices.addSweet(this.formsweets.value)
   }
 
 }
