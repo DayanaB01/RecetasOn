@@ -10,6 +10,8 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class SesionComponent {
 
+  alerta: boolean= false;
+  msg: any = "";
   inicioSesion: FormGroup;
 
   constructor(private userservice: UsersService, private routers: Router){
@@ -24,7 +26,10 @@ export class SesionComponent {
     .then(res=>{    
       this.routers.navigate(['/verlista'])      
     })
-    .catch(error=>console.log(error))
+    .catch(error=>{
+      this.alerta = true;
+      this.msg = 'Ups!!, hay un error en tus datos,por favor vuelve a intentarlo';
+    })
   }
 
 }

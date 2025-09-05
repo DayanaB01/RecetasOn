@@ -2,11 +2,14 @@
     <div class="sesion">
         <h4>INICIAR SESION</h4>
         <label> CORREO
-          <input type="text" class="form-control" formControlName="correo"/>
+          <input type="email" class="form-control" formControlName="correo"/>
         </label>      
         <label> CONTRASEÑA 
           <input type="password" class="form-control" formControlName="password" />
         </label>
+        <div class="alerta" *ngIf="alerta">
+          <span>{{msg}}</span>
+        </div>
         <button type="submit">ENTRAR</button>
       </div>
 </form>

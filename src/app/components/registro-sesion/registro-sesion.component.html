@@ -9,16 +9,23 @@
       </label>
       <label>
         CORREO:
-        <input type="text" class="form-control" formControlName="correo" />
+        <input
+        mat-input
+        type="email"
+        formControlName="correo"
+         required/>
       </label>
       <label>
         CONTRASEÑA:
-        <input type="password" />
+        <input type="password"/>
       </label>
       <label>
         CONFIRMAR CONTRASEÑA:
         <input type="password"  class="form-control" formControlName="password"/>
       </label>
+      <div class="alert" *ngIf="alerta">
+        <span>{{msg}}</span>
+      </div>
       <button type="submit">REGISTRAR</button>
     </div>
     <div class="sesion1">
