@@ -14,6 +14,8 @@ export class RegistroSesionComponent{
   alerta:boolean = false;
   msg: any = '';
   formRegister: FormGroup;
+  pass: string = '';
+
 
   constructor(private usersService: UsersService){
     this.formRegister = new FormGroup({
@@ -28,7 +30,9 @@ export class RegistroSesionComponent{
   if (this.formRegister.value.correo == null || this.formRegister.value.usuario == null || this.formRegister.value.password == null) {
     this.alerta = true;
     this.msg = "Por favor rellena todos los campos";
-  } else {
+  }
+  //  else  if (this.formRegister.value.password) {}
+   else{
     this.usersService.register(this.formRegister.value)
     .then(response=>{
       alert('GRACIAS POR REGISTRARTE!! AHORA PUEDES INICIAR SESION')
